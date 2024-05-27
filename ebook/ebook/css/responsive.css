@@ -1,0 +1,13 @@
+@media (max-width: 640px) {
+	.pricing {
+		margin-bottom: 15px;
+	}
+
+	.navbar .n-link {
+		margin-top: 20px;
+	}
+
+	.navbar-eb .navbar-brand h1 {
+		bottom: 12px !important;
+	}
+}

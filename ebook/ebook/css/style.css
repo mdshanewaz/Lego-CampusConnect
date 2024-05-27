@@ -1,0 +1,303 @@
+/* ------------
+	Ebook - Landing Page Template
+---------------  */
+
+/* 	===============
+	css import
+===============  */
+@import url(../css/font-awesome.min.css);
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	color: #666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lato', sans-serif;
+	color: #444;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+h1 {
+	font-size: 46px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 42px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 28px;
+	font-weight: 500;
+}
+
+h5 {
+	font-size: 24px;
+	font-weight: 500;	
+}
+
+h6 {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+a {
+	color: #333;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #9575cd;
+}
+
+p {
+	line-height: 24px;
+}
+
+.section {
+	padding: 80px 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+.section-title {
+	margin-bottom: 60px;
+}
+
+.section-title h4 {
+	text-align: center;
+}
+
+.section-title .divider {
+	background: #666;
+	height: 2px;
+	width: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+
+/* 	===============
+	navbar
+===============  */
+.navbar-eb {
+	padding: 20px 0;
+	background: #fff;
+}
+
+.navbar-eb .navbar-brand h1 {
+	position: relative;
+	bottom: 21px;
+	margin-bottom: 10px;
+}
+
+.navbar-eb .navbar-brand h1 span {
+	color: #9575cd;
+}
+
+.navbar-eb .n-link ul li a {
+	color: #444;
+}
+
+
+/* 	===============
+	banner
+===============  */
+.banner {
+	background: #fff;
+	padding: 100px 0;
+}
+
+.banner-content {
+	padding: 40px 0;
+}
+
+.banner-content ul {
+	padding: 0;
+	margin: 40px 0;
+	list-style: none;
+}
+
+.banner-content ul li {
+	display: inline-block;
+	margin-right: 25px;
+	background: #9961ff;
+	padding: 10px 20px;
+	border-radius: 30px;
+}
+
+.banner-content ul li:hover {
+	background-color: #9575cd;
+}
+
+.banner-content ul li a {
+	color: #fff;
+}
+
+/* 	===============
+	features
+===============  */
+.features {
+	text-align: center;
+	margin: 15px 0;
+}
+
+.features i {
+	color: #999;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+/* 	===============
+	features
+===============  */
+.pricing {
+	text-align: center;
+	border: 1px solid #e7e7e7;
+	padding: 20px 10px 40px;
+}
+
+.pricing span {
+	font-size: 35px;
+}
+
+.pricing ul {
+	margin: 20px 0 45px;
+	list-style: none;
+	padding: 0;
+}
+
+.pricing ul li {
+	padding: 8px 0;
+}
+
+.pricing .button {
+	background: #9961ff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	margin: 20px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.pricing .button:hover {
+	background-color: #9575cd;
+}
+
+/* 	===============
+	author
+===============  */
+.author img {
+	width: 100%;
+	height: 100%;
+}
+
+.author ul {
+	padding: 0;
+	margin: 12px 0;
+	list-style: none;
+}
+
+.author ul li {
+	display: inline-block;
+}
+
+.author ul li a i {
+	width: 25px;
+	height: 25px;
+	background: #333333;
+	margin-right: 10px;
+	text-align: center;
+	color: #fff;
+	padding: 4px 0;
+}
+
+.author ul li a i:hover {
+	background-color: #9575cd;
+}
+
+/* 	===============
+	testimonial
+===============  */
+.testimonial {
+	padding: 18px;
+	border: 1px solid #e7e7e7;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.testimonial img {
+	border-radius: 50%;
+	margin-bottom: 12px;
+}
+
+/* 	===============
+	contact
+===============  */
+.contact input, 
+.contact textarea {
+	width: 100%;
+	box-shadow: none;
+	border: 1px solid #e7e7e7;
+	padding: 8px;
+}
+
+.contact .button-default {
+	background: #9961ff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	margin: 20px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.contact .button-default:hover {
+	background-color: #9575cd;
+}
+
+/* 	===============
+	scroll to top
+===============  */
+#toTop {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	font-size: 34px;
+}
+
+/* 	===============
+	footer
+===============  */
+footer {
+	text-align: center;
+	background: #f6f6f6;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 0 8px;
+}
+
+footer ul li a {
+	font-size: 24px;
+}

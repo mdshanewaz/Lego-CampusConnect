@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+    webapp:
+        build:
+            context: ../../
+            dockerfile: infra-v4/local/Dockerfile.webapp
+        command: >
+            sh -c "pwd && ls &&
+            python manage.py showmigrations &&
+            python manage.py makemigrations &&
+            python manage.py migrate &&
+            gunicorn campusconnect.wsgi --bind 0.0.0.0:5000"
+        volumes:
+            - ccv1-media:/data/media
+            - ccv1-static:/data/static
+            - ccv1-log:/data/log
+        env_file:
+            - ../../.env
+        container_name: ccv1_app
+        ports:
+            - "5000:5000"
+    webserver:
+        image: nginx:latest
+        volumes:
+            - ccv1-media:/data/media
+            - ccv1-static:/data/static
+            - ccv1-log:/data/log
+            - ./nginx.conf:/etc/nginx/nginx.conf            
+        ports:
+            - "80:80"
+        container_name: ccv1_server
+
+volumes:
+    ccv1-media:
+    ccv1-static:
+    ccv1-log:
