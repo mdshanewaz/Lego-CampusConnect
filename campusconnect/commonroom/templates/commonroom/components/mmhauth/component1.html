@@ -1,0 +1,39 @@
+<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+  <tr>
+    <td valign="middle" class="hero hero-2 bg_white" style="padding: 2em 0;">
+      <table>
+        <tr>
+          <td>
+            <div class="text" style="padding: 0 2em; text-align: left;">
+              <h3 class="heading">What to do now</h3>
+              {% autoescape off %}
+
+                    <p style="color:#000">
+                        We came to know that you are interested to open an account in Resumenalyzer. 
+                        In order to complete the account activatation process, please click on the following button
+                    </p>
+
+                    <p>
+                        <a style="border-style: inset; padding:5px" href={{protocol}}://{{dns_name}}{% url 'mmhauth:mmh_auth_verification_completed_link' activation_code %}>Click Here</a>
+                    </p>
+
+                    <p style="color:#000">
+                        If clicking the link above doesn't work, 
+                        please copy and paste the following URL in a new browser
+                        window: 
+                    </p>
+
+                    <p style="color:#000; text-decoration: underline;">
+                        {{protocol}}://{{dns_name}}{% url 'mmhauth:mmh_auth_verification_completed_link' activation_code %}
+                    </p>
+
+              {% endautoescape %}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
