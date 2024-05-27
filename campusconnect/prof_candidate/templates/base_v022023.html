@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Candidate Profile | Resumenalyzer</title>
+
+	<!--favicon-->
+	<link rel="icon" href="{% static 'prof_candidate/assets/favicon.ico' %}" type="image/x-icon" />
+
+	<!-- CSS -->
+	<link href="{% static 'prof_candidate/assets/css/libs.bundle.css' %}" rel="stylesheet" />
+	<link href="{% static 'prof_candidate/assets/css/theme.bundle.css' %}" rel="stylesheet" />
+
+</head>
+
+
+
+<body class="">
+
+	{% block topnews %}
+		{% include 'resumeweb/components/menus/header/topnews.html' %}
+	{% endblock %}
+
+
+	{% block mainmenu %}
+	  {% include 'prof_candidate/components/menu/main-menu.html' %}
+	{% endblock %}
+
+
+	{% block header %}
+	  {% include 'prof_candidate/components/header.html' %}
+	{% endblock %}
+
+
+	<main class="py-8 py-md-11 bg-gray-200">		    
+	    <div class="container-md">
+
+				{% if body_content_type == 'home' %}
+			  
+				  <div class="row mb-6">
+				    <div class="col-12 col-md-4">
+							<div class="card">
+					      		{% include 'prof_candidate/components/menu/orders.html' %}
+						  	</div>
+				    </div>
+				    <div class="col-12 col-md-4">
+							<div class="card">
+								{% include 'prof_candidate/components/menu/rewards.html' %}
+							</div>
+				    </div>
+				    <div class="col-12 col-md-4">
+							<div class="card">
+					      		{% include 'prof_candidate/components/menu/resume.html' %}
+							</div>
+				    </div>
+				  </div>
+			  
+				  <div class="row mb-6">
+				    <div class="col-12 col-md-4">
+							<div class="card">
+					      		{% include 'prof_candidate/components/menu/cust_comm.html' %}
+							</div>
+				    </div>        
+				    <div class="col-12 col-md-4">
+							<div class="card">
+					      		{% include 'prof_candidate/components/menu/disputes.html' %}
+							</div>
+				    </div>        
+				    <div class="col-12 col-md-4">
+							<div class="card">
+					      		{% include 'prof_candidate/components/menu/acct_set.html' %}
+							</div>
+				    </div>                
+				  </div>
+
+				{% else %}
+	    	
+		    	<div class="row">
+						<!-- SIDEBAR -->
+						<div class="col-12 col-md-4">
+							{% block sidebar_content %}
+							{% endblock %}
+						</div>
+
+						<!-- BODY SECTION -->
+						<div class="col-12 col-md-8">
+							<div class="card mb-6">
+								{% block body_content_section_1 %}
+								{% endblock %}
+							</div>
+
+							<div class="card mb-6">
+								{% block body_content_section_2 %}
+								{% endblock %}
+							</div>
+						</div>
+				</div>
+
+				{% endif %}
+
+			</div>
+	</main>
+
+	{% block footer %}
+      <footer class="bg-dark">
+        <div class="container-fluid bg-dark">
+          <div class="pt-7 p-5 row d-flex justify-content-center">
+            {% include 'resumeweb/components/menus/footer/footer-2-white.html' %}
+          </div>
+
+          <div class="pt-7 row d-flex justify-content-center text-muted">
+            <div class="col-12 col-md-12">
+              <div class="footer_nav text-center">
+                {% include 'resumeweb/components/menus/footnotes/legaldocs.html' %} 
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+   {% endblock %}
+
+
+    <!-- VENDOR JAVASCRIPT FILES  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="{% static 'prof_candidate/assets/js/vendor.bundle.js' %}"></script>
+	<script type="text/javascript" src="{% static 'prof_candidate/assets/js/theme.bundle.js' %}"></script>
+	<script type="text/javascript" src="{% static 'prof_candidate/assets/js/custom.js' %}"></script>
+
+
+
+  {% comment "Optional note" %}
+  {% endcomment %}
+
+
+
+  <!-- shopping cart -->
+  <script src="{% static 'resumeweb/assets/js/shopcartmow1.js' %}"></script>
+  <script src="{% static 'resumeweb/assets/js/custom.js' %}" type="module"></script>    
+
+
+
+
+  <!-- Block Required For Cart Paypal Integration -->
+  {% block mmh_javascript %}
+  {% endblock mmh_javascript %}
+
+
+
+</body>
+
+</html>
