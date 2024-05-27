@@ -1,0 +1,34 @@
+{% extends 'prof_candidate/layout/primary_layout.html' %}
+{% load static %}
+
+
+
+<!-- SIDEBAR -->
+{% block sidebar_content %}
+  {% include 'prof_candidate/components/menu/disputes.html' %}
+  {% include 'prof_candidate/components/order_info.html' %}
+{% endblock %}
+
+
+
+
+<!-- BODY SECTION -->
+{% block body_content_section_1 %}
+
+
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h4 class="mb-0">Dispute Details</h4>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- customer message history  -->
+    <div class="card-body">
+      {% include 'prof_candidate/pg-contents/disputes/details.html' %}
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'prof_candidate/layout/primary_layout.html' %}
+
+
+{% block sidebar_content %}
+  <div class="card mb-6">
+    {% include 'prof_candidate/components/menu/acct_set.html' %}
+  </div>
+
+  <div class="card mb-6">
+    {% include 'prof_candidate/components/is_this_editable.html' %}
+  </div>
+
+  <div class="card mb-6">  
+    {% include 'prof_candidate/components/info_privacy_policy.html' %}
+  </div>
+
+  <div class="card mb-6">  
+    {% include 'prof_candidate/components/info_security_policy.html' %}
+  </div>
+{% endblock %}
+
+
+{% block body_content_section_1 %}
+      {% include 'prof_candidate/pg-contents/acct_settings/home.html' %}
+{% endblock %}

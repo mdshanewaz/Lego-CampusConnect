@@ -1,0 +1,79 @@
+{% extends 'prof_candidate/layout/primary_layout.html' %}
+
+
+{% block sidebar_content %}
+    <div class="card">
+      {% include 'prof_candidate/components/menu/resume.html' %}
+    </div>
+    <div class="card">
+      {% include 'prof_candidate/components/file-upload-benefits.html' %}
+    </div>
+    <div class="card">  
+      {% include 'prof_candidate/components/info_privacy_policy.html' %}
+    </div>
+    <div class="card">
+      {% include 'prof_candidate/components/who_can_see_my_data.html' %}
+    </div>
+    <div class="card">
+      {% include 'prof_candidate/components/why_i_need_to_upload_my_resume.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block body_content_section_1 %}
+
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h4 class="mb-0">{{section_header_1}}</h4>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- resume upload form  -->
+    <div class="card-body">
+        {% include 'prof_candidate/pg-contents/my_resume/resume-doc-type-conditions.html' %}
+    </div>
+
+
+    <div class="card-body">
+        {% include 'prof_candidate/pg-contents/my_resume/file-upload-form.html' %}                                
+    </div>
+
+
+    <div class="card-body">
+        {% include 'prof_candidate/pg-contents/my_resume/file-upload-confirmation.html' %}
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
+{% block body_content_section_2 %}
+    <!-- retrieve current resume  -->
+
+
+
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h4 class="mb-0">{{section_header_2}}</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+        {% include 'prof_candidate/pg-contents/my_resume/retrieve_current_resume.html' %}
+    </div>
+
+
+
+
+ {% endblock %}
+
+ 
+

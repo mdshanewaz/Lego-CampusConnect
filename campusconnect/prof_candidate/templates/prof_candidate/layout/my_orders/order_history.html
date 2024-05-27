@@ -1,0 +1,38 @@
+{% extends 'prof_candidate/layout/primary_layout.html' %}
+{% load static %}
+
+
+{% block sidebar_content %}
+  <div class="card">
+    {% include 'prof_candidate/components/menu/orders.html' %}
+  </div>
+{% endblock %}
+
+
+{% block body_content_section_1 %}
+
+    <div class="card-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h4 class="mb-0">{{section_header_1}}</h4>
+        </div>Total Order Placed # {{no_of_orders}}
+      </div>
+    </div>
+
+    <div class="card-body">
+      {% if object_list %}
+        {% for object in object_list %}
+          <div class="mb-6">
+            {% include 'prof_candidate/pg-contents/my_orders/order_object.html' %}
+          </div>
+        {% endfor %}
+      {% else %}
+        you have no orders yet
+      {% endif %}
+    </div>
+
+{% endblock %}
+
+
+{% comment "Optional note" %}
+{% endcomment %}

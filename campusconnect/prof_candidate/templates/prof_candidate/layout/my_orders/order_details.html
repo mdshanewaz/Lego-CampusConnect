@@ -1,0 +1,49 @@
+{% extends 'prof_candidate/layout/primary_layout.html' %}
+{% load static %}
+
+
+{% block sidebar_content %}
+  <div class="card mb-6">
+    {% include 'prof_candidate/components/menu/orders.html' %}
+  </div>
+  <div class="card mb-6">
+    {% include 'prof_candidate/components/orders/payment_mode.html' %}
+  </div>
+  <div class="card mb-6">  
+    {% include 'prof_candidate/components/orders/pricing_info.html' %}
+  </div>
+  <div class="card mb-6">  
+    {% include 'prof_candidate/components/orders/conf_email_sent_to.html' %}
+  </div>
+  <div class="card mb-6">  
+    {% include 'prof_candidate/components/orders/invoice.html' %}
+  </div>
+{% endblock %}
+
+
+
+{% block body_content_section_1 %}
+
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col">
+        <h4 class="mb-0">{{section_header_1}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        {% include 'prof_candidate/pg-contents/my_orders/order-details.html' %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+
+{% comment "Optional note" %}
+{% endcomment %}
