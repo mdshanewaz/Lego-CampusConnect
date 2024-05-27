@@ -1,0 +1,45 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'adhoc/pg-contents/opening-banner.html' %}
+{% endblock %}
+
+    
+{% block top3_features %}
+    {% include 'adhoc/pg-contents/prod-feat-top3.html' %}    
+{% endblock %}
+
+
+{% block your_benif %}
+    <div class="py-7 py-md-7">
+        {% include 'adhoc/pg-contents/user-ben.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+    <div class="py-7 py-md-7">
+        {% include 'adhoc/components/ads/1-target-audi.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block service_list %}
+    {% include 'adhoc/pg-contents/submit-req-now.html' %}
+{% endblock %}
+
+
+{% block mkt_ad_2 %}
+    {% include 'adhoc/components/ads/1-customer-service.html' %}    
+{% endblock %}
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'adhoc/pg-contents/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+

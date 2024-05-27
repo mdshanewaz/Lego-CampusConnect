@@ -1,0 +1,80 @@
+{% extends 'resumeweb/layout/base_form_submission.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block meta %}
+  <title>Adhoc Service | Home | Resumenalyzer</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+{% endblock %}
+
+
+{% block left_column %}
+  <div class="mb-6">
+    {% include 'adhoc/components/before-you-submit.html' %}
+  </div>
+  <div class="mb-6">  
+    {% include 'adhoc/components/how-we-process-your-request.html' %}
+  </div>
+  <div class="mb-6">  
+    {% include 'adhoc/components/how-we-encrypt-your-data.html' %} 
+  </div>
+  <div class="mb-6">  
+    {% include 'adhoc/components/contact-info-privacy.html' %}
+  </div>
+  <div class="mb-6">  
+    {% include 'adhoc/components/what-happens-next.html' %}
+  </div>    
+{% endblock %}
+
+
+{% block right_column %}
+
+    <div class="col-12 col-md-8">
+        <div class="row mb-md-8 mb-6">
+            <div class="col">
+              <h2 class="fw-bolder mb-0">
+                Adhoc Service: Submit Request
+              </h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="card border">
+                <div class="card-body">
+                  <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}  
+                  
+                    <div class=mb-6>
+                      {% include 'adhoc/forms/target_job_descp.html' %}
+                    </div>
+
+                    <div class=mb-6>
+                      {% include 'adhoc/forms/resume.html' %}  
+                    </div>
+
+                    <div class=mb-6>
+                      {% include 'adhoc/forms/your_ques.html' %}
+                    </div>
+
+                    <div class=mb-6>
+                      {% include 'adhoc/forms/your_feedback.html' %}
+                    </div>
+
+                    <div class=mb-6>
+                      {% include 'adhoc/forms/contact_info.html' %}
+                    </div>
+
+                  
+                    <button type="submit" class="btn btn-primary btn-xs rounded-0">Submit</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}  

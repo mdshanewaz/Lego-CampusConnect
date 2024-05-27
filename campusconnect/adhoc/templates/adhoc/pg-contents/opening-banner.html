@@ -1,0 +1,68 @@
+{% load static %}
+
+
+<div class="container py-7">
+  <div class="py-7 row align-items-center justify-content-between">
+
+    <div class="col-12 col-md-6 order-md-1">
+      <h6 class="text-uppercase text-primary">Services / Universal / Adhoc</h6>
+      <h1 class="fw-bolder display-3 text-primary">
+          Create your personalized service
+      </h1>
+      <div class="d-flex">
+        <div class="ms-1">
+          <h4 class="fw-bolder mb-1">
+            Get started for free, always!
+          </h4>
+          <p class="fs-sm text-reset mb-3">
+            If you didnot find a suitable service from our Exp180 services,
+            you can request for an Adhoc service that's tailored to your
+            customized demand
+          </p>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="ms-1">
+          <h4 class="fw-bolder mb-1">
+            Applicable for all service lines
+          </h4>
+          <p class="fs-sm text-reset mb-3">
+            If you didnot find a suitable service from our Exp180 services,
+            you can request for an Adhoc service that's tailored to your
+            customized demand
+          </p>
+        </div>
+      </div>      
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-5 order-md-2">
+      <div class="card bg-gray-300">
+        <img src="{% static 'resumeweb/assets/img/photos/photo-2.jpg' %}" alt="..." class="card-img-top">
+        
+        <div class="card-body">
+          <form>
+            <div class="form-floating">
+              <input type="email" class="form-control form-control-flush border-bottom border-dark bg-gray-300" placeholder="Email" disabled="">
+              <label for="cardEmail" class="px-1">Job description sample</label>
+            </div>
+            <div class="form-floating bg-dark">
+              <input type="email" class="form-control form-control-flush border-bottom border-dark bg-gray-300" placeholder="Email" disabled="">
+              <label for="cardEmail" class="px-1">Your Resume</label>
+            </div>
+            <div class="form-floating">
+              <input type="email" class="form-control form-control-flush border-bottom border-dark bg-gray-300" placeholder="Email" disabled="">
+              <label for="cardEmail" class="px-1">Contact Information</label>
+            </div>
+            <div class="mt-6">
+              <button class="btn btn-primary rounded-0" type="submit">
+                <a href="{% url 'adhoc:adhoc_submit_req_now' %}" class="text-white text-decoration-none">Get Started</a>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

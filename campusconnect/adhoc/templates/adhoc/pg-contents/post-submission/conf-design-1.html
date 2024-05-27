@@ -1,0 +1,34 @@
+{% block thankyou_note %}
+
+  <div class="table-responsive">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Order ID</th>
+          <td>{{submission_id}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Order Date</th>
+          <td>{{date_time}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Confirmation email sent to</th>
+            <td>
+            {% for email in email_address_list %}
+              {{email}}<br>
+            {% endfor %}
+            </td>
+        </tr>
+        <tr>
+          <th scope="row">Method of Delivery</th>
+          <td>Order will be delivered electronically to: {{electronic_delivery_email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+      <a class="btn btn-primary" href="{% url 'adhoc:adhoc_home' %}">Complete</a>
+  </p>
+
+{% endblock %}
