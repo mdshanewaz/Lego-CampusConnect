@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col">
+    <p class="text-primary fw-bolder">
+      <a class="" href="{%url 'prof_candidate:order_details' object.tracking_id %}">Tracking ID # {{ object.tracking_id }}</a>
+    </p>
+  </div>
+</div>
+
+
+<ul>
+  <li type="square">Order Date & Time
+    <ul>
+      <li>{{ object.created|date:'m-d-Y h:i a' }} EST</li>
+    </ul>
+  </li>
+  <li type="square">Product(s) Purchased
+    <ul>
+      <li>{{ object.sku | upper}}</li>
+      <li>{{ object.title | title}}</li>
+    </ul>
+  </li>
+  <li type="square">Order Processing Status
+    {% if object.processing_status == 'cancelled' %}
+    <ul>
+      <li>Order processing is on hold</li>
+    </ul>
+    {% else %}
+    <ul>
+      <li>{{ object.processing_status | title }}</li>
+    </ul>    
+    {% endif %}
+  </li>
+  <li type="square">Order Cancellation Status
+    <ul>
+          {% if object.processing_status == 'pending' or object.processing_status == 'processing' %}
+            {% if object.grace_left_in_seconds %}
+              <li class="text-reset">You can cancel this order within {{ object.grace_period_ends|timeuntil }}</li>
+              <li><a class="" href="{% url 'prof_candidate:mmh_cancel_order' object.tracking_id %}">Cancel Order</a></li>
+            {% else %}
+              <li class="text-reset">Order cancellation time has expired125</li>
+            {% endif %}
+        
+          {% elif object.processing_status == 'cancelled' %}
+            <li class="text-reset">Order cancellation request placed by user</li>
+            <li class="text-reset">
+              <a href="{% url 'prof_candidate:mmh_cancel_order_details' object.tracking_id %}">See my request details</a>
+            </li>
+            <li class="text-reset"><a href="">See my refund status</a></li>
+          
+          {% else %}
+            <li class="text-reset">You cannot cancel this order because the order is delivered</li>
+          {% endif %}
+    </ul>
+  </li>
+  <li type="square">Order Delivery Status
+    <ul>
+          {% if object.processing_status == 'delivered' %}
+          <li>Order is delivered on xx-xx-2023 EST</li>
+          <li><a class="" href="">Check Delivery Status</a></li>
+          {% elif object.processing_status == 'cancelled' %}
+          <li>Delivery is on hold</li>
+          <li><a class="" href="">Check Delivery Status</a></li>          
+          {% else %}
+            <li>Not delivered yet</li>
+            <li>To be delivered by xx-00-2023</li>
+            <li><a class="" href="">Check Delivery Status</a></li>
+          {% endif %}
+    </ul>
+  </li>  
+  <li type="square">Post Delivery Options
+    <ul>
+        {% if object.processing_status == 'delivered' %}
+        <li>
+          <a class="" href="{% url 'prof_candidate:file_dispute_from_order_details' object.tracking_id %}">File Dispute</a>
+        </li>
+        <li>
+          <a class="" href="{% url 'prof_candidate:submit_feedback_for_order' object.tracking_id %}">Give Service Feedback</a>
+        </li>
+        {% elif object.processing_status == 'cancelled' %}
+          <li>Options are not available anymore</li>
+        {% elif object.processing_status == 'pending' or object.processing_status == 'processing' %}  
+          <li>Options are not available yet</li>
+        {% endif %}
+      </li>
+    </ul>
+  </li>
+
+</ul>
+
+
+{% comment "comment text" %}
+{% endcomment %}
