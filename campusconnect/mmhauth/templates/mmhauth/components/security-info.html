@@ -1,0 +1,44 @@
+{% load static %}
+
+<div class="container-fluid bg-light">
+  <div class="container">
+    <div class="row align-items-center py-5">
+      <div class="col-auto">
+
+        <!-- Avatar -->
+        <div class="avatar avatar-lg">
+          <span class="fe fe-lock"></span>
+        </div>
+
+      </div>
+      <div class="col ms-n5">
+        <h6 class="text-reset text-uppercase mb-0">Secure Signin</h6>
+      </div>
+      <div class="col-auto">
+
+        <!-- Icons -->
+        <ul class="d-inline list-unstyled list-inline list-social">
+          <li class="list-inline-item list-social-item me-3">
+            <a href="{% url 'mydocumentations:privacy_policy' %}" class="text-decoration-none text-reset fs-sm">
+              Privacy Policy
+            </a>
+          </li>
+          <li class="list-inline-item list-social-item me-3">
+            <a href="{% url 'mydocumentations:terms_of_use' %}" class="text-decoration-none text-reset fs-sm">
+              Terms of Use
+            </a>
+          </li>
+          <li class="list-inline-item list-social-item me-3">
+            <a href="#!" class="text-decoration-none text-reset fs-sm">
+              Security Policy
+            </a>
+          </li>
+          <li class="list-inline-item list-social-item me-3">
+            <p class="text-decoration-none text-reset fs-sm">v{{app_version}}</p>
+          </li>          
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
