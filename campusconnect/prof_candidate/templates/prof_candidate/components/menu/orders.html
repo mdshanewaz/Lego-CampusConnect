@@ -1,0 +1,21 @@
+<div class="card-body">
+  <h5 class="fw-bolder text-uppercase">My Orders</h5>
+  <ul class="card-list list text-reset">
+    <li class="list-item">
+      <a class="list-link text-reset" href="{% url 'prof_candidate:order_history_all' %}">
+        My Order History
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+{% comment "Optional note" %}
+MMH: removing this view as it is being merged into pending view.
+MMH: pending view renamed to processing.
+<li class="list-item">
+  <a class="list-link text-reset" href="{% url 'prof_candidate:order_history_inprocessing' %}">
+    Processing
+  </a>
+</li>
+{% endcomment %}

@@ -1,0 +1,20 @@
+<header class="bg-dark pt-9 pb-11 d-none d-md-block">
+  <div class="container-md">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1 class="mb-2">
+          <a href="{% url 'prof_candidate:dashboard_homepage' %}" class="fw-bolder text-white text-decoration-none">
+            Candidate Dashboard
+          </a>
+        </h1>
+        <p class="fs-sm text-white-75 mb-0">
+          Signed in as {{user.first_name | title}}
+        </p>
+      </div>
+      <div class="col-auto">
+        <a href="{% url 'prof_candidate:dashboard_homepage' %}" class="btn btn-sm btn-gray-300-20">Home</a>
+        <a href="{% url 'mmhauth:mmh_auth_logout_request' %}" class="btn btn-sm btn-gray-300-20">Sign Out</a>
+      </div>
+    </div>
+  </div>
+</header>
