@@ -1,0 +1,71 @@
+{% load static %}
+
+
+<nav class="d-lg-none bg-dark">
+  <div class="container-fluid">
+    <div class="row align-items-center border-bottom">
+      <div class="col">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <span class="text-white">
+              Services
+            </span>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <span class="text-white">
+              List
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="col-auto">
+        <div class="navbar-dark">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div class="container-fluid bg-dark">
+  <div class="col-12 border-end-lg border-gray-300">
+
+    <div class="collapse d-lg-block bg-dark" id="sidenavCollapse">
+      <ul class="nav py-1" style="display: flex; justify-content: space-between;">
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link ms-n3 text-white" href="{% url 'exp180_homepg_url' %}">
+            <i class="fe fe-pause text-warning px-1"></i>Pre-I20</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link text-white" href="{% url 'adhoc:adhoc_home' %}">
+          <i class="fe fe-send text-warning px-1"></i>Adhoc</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link text-white" href="{% url 'usvisa_home' %}">
+          <i class="fe fe-send text-warning px-1"></i>Post-I20</a>
+        </li>        
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link text-white" href="{% url 'intprep_home' %}">
+          <i class="fe fe-phone-incoming text-warning px-1"></i>University Selection</a>
+        </li>
+
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link text-white" href="{% url 'proglang_home' %}">
+            <i class="fe fe-code text-warning px-1"></i>VISA Interview</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="fw-bolder nav-link text-white" href="{% url 'rolebased_home' %}">
+          <i class="fe fe-credit-card text-warning px-1"></i>Profile Analysis</a>
+        </li>
+      </ul>      
+    </div>
+    
+  </div>
+</div>
+
