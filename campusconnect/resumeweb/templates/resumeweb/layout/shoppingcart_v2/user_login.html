@@ -1,0 +1,17 @@
+{% extends 'resumeweb/layout/base_shopcart.html' %}
+
+
+{% block cart_leftsidebar_section %}
+  {% include 'resumeweb/layout/shoppingcart_v2/components200/user_login/accordion.html' %}
+{% endblock %}
+
+
+{% block cart_rightsidebar_section %}
+  <div class="card-body border mb-6">
+    {% include 'resumeweb/layout/shoppingcart_v2/components200/summary/placeholder.html' %}
+  </div>
+{% endblock %}
+
+
+{% comment "Optional note" %}
+{% endcomment %}

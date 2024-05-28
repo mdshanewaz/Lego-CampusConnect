@@ -1,0 +1,125 @@
+{% extends 'resumeweb/layout/primary_layout.html' %}
+
+
+{% block body_contents %}
+
+  <section class="mb-0">
+    <div class="container-fluid bg-gray-300">
+      <div class="container">
+        <div class="py-7 py-md-10">
+          {% block top3_features %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="py-10 py-md-10">
+            {% block your_benif %}
+            {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid">
+      <div class="py-7 py-md-10">
+        {% block mkt_ad_1 %}
+        {% endblock %}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- section >> service list -->
+  <section class="mb-0 bg-gray-300">
+    <div class="container-fluid">
+      <div class="container">
+        
+        <div class="row">
+          <div class="pt-7 pt-md-7">
+            {% if product_line != 'adhoc' %}
+              <div class="row">
+                <div class="col-12 col-md-10 col-lg-8 mb-6">
+                  <h1 class="fw-bolder">{{product_line|capfirst}} :: Highlighted Services</h1>
+                </div>
+              </div>
+            {% else %}
+              <div class="row">
+                <div class="col-12 col-md-10 col-lg-8 mb-6">
+                  <h1 class="fw-bolder">{{product_line|capfirst}} :: Submit a Request</h1>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="pb-7 pb-md-10">
+            {% block service_list %}
+            {% endblock %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid">
+      <div class="py-7 py-md-10">
+        <div class="container">
+          {% block mkt_ad_2 %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+      
+
+  <section class="mb-0">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="py-10 py-md-10">
+            {% block get_started %}
+            {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid">
+      <div class="py-7 py-md-10">
+        {% block mkt_ad_3 %}
+        {% endblock %}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid">
+        {% block mkt_ad_4 %}
+        {% endblock %}
+    </div>
+  </section>
+
+
+  <section class="mb-0">
+    <div class="container-fluid bg-gray-300">
+      <div class="container">
+          {% include 'resumeweb/components/ads/1-customer-service-msg-now.html' %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

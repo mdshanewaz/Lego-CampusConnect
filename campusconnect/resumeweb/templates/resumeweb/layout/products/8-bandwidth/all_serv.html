@@ -1,0 +1,38 @@
+{% extends 'resumeweb/layout/base_prod_list.html' %}
+
+
+{% block leftside_contents %}
+
+  {% if pg_layout_type != 'All Services' %}
+  
+      <div class="mb-6">
+        {% include 'resumeweb/components/0-bandwidth/cat-list.html' %}
+      </div>
+      <div class="mb-6">
+        {% include 'resumeweb/components/faq-gen.html' %}
+      </div>
+      <div class="mb-6">
+        {% include 'resumeweb/components/menus/products/bandwidth/prod-insight-1.html' %}
+      </div>
+  {% else %}
+
+    <div class="mb-6">
+      {% include 'resumeweb/components/0-bandwidth/about.html' %}
+    </div>
+    <div class="mb-6">
+      {% include 'resumeweb/components/0-bandwidth/quick-start-guide.html' %}
+    </div>
+    <div class="mb-6">
+      {% include 'resumeweb/components/0-bandwidth/cat-list.html' %}
+    </div>  
+    <div class="mb-6">
+      {% include 'resumeweb/components/menus/products/bandwidth/prod-insight-1.html' %}
+    </div>
+
+  {% endif %}
+{% endblock %}
+
+
+{% block service_list %}
+    {% include 'resumeweb/pg-contents/products/8-bandwidth/service-list-long.html' %}
+{% endblock %}

@@ -1,0 +1,5 @@
+{% if not products_list %}
+	{% include 'resumeweb/layout/shoppingcart_v2/components200/cart-bag-empty.html' %}
+{% else %}
+	{% include 'resumeweb/layout/shoppingcart_v2/components200/cart-bag-not-empty.html' %}
+{% endif %}

@@ -1,0 +1,56 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'resumeweb/pg-contents/products/5-staircase/opening_banner.html' %}
+{% endblock %}
+
+
+{% block top3_features %}
+    {% include 'resumeweb/pg-contents/product-feat-top3/staircase.html' %}    
+{% endblock %}
+
+
+{% block your_benif %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/pg-contents/user-benifits/staircase.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/components/ads/1-target-audi.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block service_list %}
+    <div class="col-12 col-md-8">
+        {% include 'resumeweb/pg-contents/products/5-staircase/service-list-short.html' %}
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_2 %}
+    {% include 'resumeweb/components/ads/1-pre-and-post-pur-tools.html' %}    
+{% endblock %}
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'resumeweb/pg-contents/products/5-staircase/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+<!-- relevent Exp180 services -->
+
+
+{% block mkt_ad_3 %}
+    <div class="container-fluid bg-primary">
+        {% include 'resumeweb/components/ads/1-with-h1b-visa.html' %}    
+    </div>
+{% endblock %}

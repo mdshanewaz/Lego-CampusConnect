@@ -1,0 +1,61 @@
+{% extends 'base_v3.html' %}
+
+
+{% block meta %}
+  <title>{{prod_name|title}} | {{page_type|title}} | Resumenalyzer</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+{% endblock %}
+
+
+{% block content %}
+
+      <section class="py-6">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-4 col-xl-4 pt-5 px-lg-0 border-bottom border-bottom-lg-0 border-end-lg border-gray-300 sidenav sidenav-start bg-light">
+
+              <div class="collapse d-lg-block" id="sidenavCollapse">
+                <div class="py-7 py-lg-9 px-lg-7">
+                  <div class="col-12 col-md-10">
+
+                    {% block leftside_contents %}{% endblock %}
+
+                    <div class="mb-6">
+                      {% include 'resumeweb/components/need_customization.html' %}
+                    </div>
+                    <div class="mb-6">
+                      {% include 'resumeweb/components/need_help.html' %}
+                    </div>
+                    <div class="mb-6">
+                      {% include 'resumeweb/components/menus/footnotes/legaldocs.html' %}
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-12 col-md-8 col-xl-8 pt-5 offset-lg-4 offset-xl-4 py-10 py-lg-9 px-lg-7">
+              <div class="col-12 col-md-9 py-9">
+                  
+                  {% block breadcrumb %}
+                      {% include 'resumeweb/components/breadcrumb/serv_list.html' %}
+                  {% endblock %}
+
+                  <div class="col-12 col-md-12">
+                    {% block service_list %}{% endblock %}
+                  </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

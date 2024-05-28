@@ -1,0 +1,55 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'resumeweb/pg-contents/products/6-dialect/opening-banner-1.html' %}    
+    {% include 'resumeweb/pg-contents/products/6-dialect/opening_banner_2.html' %}    
+{% endblock %}
+
+
+{% block top3_features %}
+    {% include 'resumeweb/pg-contents/product-feat-top3/dialect.html' %}    
+{% endblock %}
+
+
+{% block your_benif %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/pg-contents/user-benifits/dialect.html' %}        
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/components/ads/1-target-audi.html' %}
+    </div>
+    <div class="bg-dark">
+        {% include 'resumeweb/components/ads/1-with-f1-visa.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block service_list %}
+    <div class="col-12 col-md-10">
+        {% include 'resumeweb/pg-contents/products/6-dialect/service-list-short.html' %}
+    </div>
+{% endblock %}
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'resumeweb/pg-contents/products/6-dialect/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+<!-- relevent Exp180 services -->
+
+
+{% block mkt_ad_3 %}
+    {% include 'resumeweb/components/ads/1-why-signup.html' %}    
+{% endblock %}
+

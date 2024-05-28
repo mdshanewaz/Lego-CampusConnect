@@ -1,0 +1,65 @@
+{% extends 'resumeweb/layout/primary_layout.html' %}
+
+
+{% block opening_banner %}
+  <section class="py-6 py-md-6">
+    <div class="container">
+        {% include 'resumeweb/components/pgheaders/all.html' %}
+    </div>
+  </section>
+{% endblock %}
+
+
+{% block body_contents %}
+
+  <section class="py-6 py-md-6 bg-gray-200">
+    <div class="container">
+      <div class="row">
+
+        {% block left_column %}
+          <div class="col-12 col-md-8 mb-6">
+            {% block div_prod_details %}
+                <div class="mb-10 bg-white">
+                  {% block prod_details_section %}
+                    {% include 'resumeweb/pg-contents/products/prod-details-div.html' %}
+                  {% endblock %}    
+                </div>
+            {% endblock %}
+
+            
+            {% block div_prod_details_tail %}
+                <div class="mb-6">
+                  {% include 'resumeweb/pg-contents/products/product-matrix.html' %}
+                </div>
+            {% endblock %}
+          </div>
+        {% endblock %}
+
+        
+        <div class="col-12 col-md-4 mb-6">
+
+          {% block right_column %}{% endblock %}
+
+          <div class="mb-6">
+            {% include 'resumeweb/components/need_customization.html' %}
+          </div>
+          <div class="mb-6">
+            {% include 'resumeweb/components/need_help.html' %}
+          </div>
+        
+        </div>
+        
+
+      </div>
+    </div>
+  </section>  
+
+  <div class="bg-gray-300">
+    {% include 'resumeweb/components/ads/1-customer-service-msg-now.html' %}
+  </div>
+  
+{% endblock %}
+
+
+{% block mmh_javascript %}
+{% endblock mmh_javascript %}

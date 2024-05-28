@@ -1,0 +1,52 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+	{% include 'resumeweb/pg-contents/products/9-strategy/opening_banner.html' %}
+{% endblock %}
+
+
+{% block top3_features %}
+	{% include 'resumeweb/pg-contents/product-feat-top3/strategy.html' %}    
+{% endblock %}
+		
+
+{% block your_benif %}
+	<div class="py-7 py-md-7">
+		{% include 'resumeweb/pg-contents/user-benifits/strategy.html' %}        
+	</div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+	{% include 'resumeweb/components/ads/1-target-audi.html' %}
+{% endblock %}
+
+
+{% block mkt_ad_2 %}
+	{% include 'resumeweb/components/ads/not-assigned-1.html' %}
+{% endblock %}
+
+
+{% block service_list %}
+	{% include 'resumeweb/pg-contents/products/9-strategy/service-list-short.html' %}
+{% endblock %}
+
+
+{% block get_started %}
+	<div class="row">
+		{% include 'resumeweb/pg-contents/products/9-strategy/get-started-with.html' %}
+	</div>
+{% endblock %}
+
+
+{% block mkt_ad_3 %}
+	<div class="container">
+		{% include 'resumeweb/components/ads/1-Shop-with-Confidence.html' %}
+	</div>
+{% endblock %}
+
+
+{% block mkt_ad_4 %}
+	{% include 'resumeweb/components/ads/1-text-cloud.html' %}	
+{% endblock %}

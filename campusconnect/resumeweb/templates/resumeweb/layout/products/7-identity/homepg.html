@@ -1,0 +1,61 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'resumeweb/pg-contents/products/7-identity/opening_banner.html' %}
+{% endblock %}
+
+
+{% block top3_features %}
+    {% include 'resumeweb/pg-contents/product-feat-top3/identity.html' %}    
+{% endblock %}
+
+
+{% block your_benif %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/pg-contents/user-benifits/identity.html' %}        
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+        {% include 'resumeweb/components/ads/1-target-audi.html' %}    
+{% endblock %}
+
+
+{% block service_list %}
+        {% include 'resumeweb/pg-contents/products/7-identity/service-list-short.html' %}
+{% endblock %}
+
+
+{% block mkt_ad_2 %}
+    {% include 'resumeweb/components/ads/1-your-info-privacy.html' %}    
+{% endblock %}
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'resumeweb/pg-contents/products/7-identity/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+<!-- relevent Exp180 services -->
+{% block mkt_ad_3 %}
+    <div class="container-fluid">
+        <div class="border-top">
+            {% include 'resumeweb/components/ads/1-our-recommend.html' %}    
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_4 %}    
+    <div class="container-fluid">
+        <div class="border-top">
+            {% include 'resumeweb/components/ads/1-Shop-with-Confidence.html' %}    
+        </div>
+    </div>
+{% endblock %}

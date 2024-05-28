@@ -1,0 +1,64 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'resumeweb/pg-contents/products/1-exp180/opening_banner.html' %}
+{% endblock %}
+    
+
+{% block top3_features %}
+    {% include 'resumeweb/pg-contents/product-feat-top3/exp180.html' %}    
+{% endblock %}
+    
+
+{% block your_benif %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/pg-contents/user-benifits/exp180.html' %}
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+    <div class="py-7 py-md-7">
+        {% include 'resumeweb/components/ads/1-target-audi.html' %}    
+    </div>
+{% endblock %}
+
+
+{% block service_list %}
+    <div class="col-12 col-md-8">
+        {% include 'resumeweb/pg-contents/products/1-exp180/service-list-short.html' %}
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_2 %}
+    {% include 'resumeweb/components/ads/1-need-to-customize-service.html' %}    
+{% endblock %}
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'resumeweb/pg-contents/products/1-exp180/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_3 %}
+    <div class="container">
+        <div class="py-10 py-md-10">
+            {% include 'resumeweb/components/ads/1-how-to-make-purchase.html' %}    
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_4 %}
+    <div class="container">
+        <div class="py-10 py-md-10">
+            {% include 'resumeweb/components/ads/1-intro-to-jobsearch2-0.html' %}    
+        </div>
+    </div>
+{% endblock %}

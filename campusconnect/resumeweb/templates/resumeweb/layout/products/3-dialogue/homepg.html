@@ -1,0 +1,45 @@
+{% extends 'resumeweb/layout/base_prod_homepg.html' %}
+
+
+{% block opening_banner %}
+    {% include 'resumeweb/pg-contents/products/3-dialogue/opening_banner.html' %}
+{% endblock %}
+
+
+{% block top3_features %}
+    {% include 'resumeweb/pg-contents/product-feat-top3/dialogue.html' %}    
+{% endblock %}
+
+    
+{% block your_benif %}
+    {% include 'resumeweb/pg-contents/user-benifits/dialogue.html' %}    
+{% endblock %}
+
+
+{% block mkt_ad_1 %}
+        {% include 'resumeweb/components/ads/1-target-audi.html' %}    
+{% endblock %}
+
+
+{% block service_list %}
+        {% include 'resumeweb/pg-contents/products/3-dialogue/service-list-short.html' %}
+{% endblock %}    
+
+
+{% block get_started %}
+    <div class="container">
+        <div class="row">
+            {% include 'resumeweb/pg-contents/products/3-dialogue/get-started-with.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block mkt_ad_3 %}
+    <div class="container-fluid bg-white border-top">
+        <div class="container">
+            {% include 'resumeweb/components/ads/1-weare-wearenot.html' %}
+        </div>
+    </div>
+{% endblock %}
+
