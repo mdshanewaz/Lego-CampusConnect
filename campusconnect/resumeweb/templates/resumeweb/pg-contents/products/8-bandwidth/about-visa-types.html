@@ -1,0 +1,153 @@
+{% load static %}
+
+<section class="pt-7 pt-md-10">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-md">
+        <h2 class="mb-0">
+          Learn About US Work VISA Types
+        </h2>
+        <p class="mb-5 text-muted">
+          These span the grid's entire width with several options.
+        </p>
+      </div>
+      <div class="col-12 col-md-auto">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+
+        <!-- Slider -->
+        <div class="card card-row shadow-light-lg mb-6">
+          <div class="row gx-0">
+            <!-- img -->
+            <div class="col-12 col-md-6">
+              <div class="card-img-slider" data-flickity='{"fade": true, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "asNavFor": "#blogSlider", "draggable": false}'>
+                <div class="card-img-start w-100 bg-cover" style="background-color: #FFF;">
+                  <img src="{% static 'resumeweb/assets/img/photos/photo-26.jpg' %}">
+                </div>
+                <div class="card-img-start w-100 bg-cover" style="background-color: #FFF;">
+                  <img src="{% static 'resumeweb/assets/img/photos/photo-26.jpg' %}">
+                </div>
+                <div class="card-img-start w-100 bg-cover" style="background-color: #FFF;">
+                  <img src="{% static 'resumeweb/assets/img/photos/photo-26.jpg' %}">
+                </div>
+                <div class="card-img-start w-100 bg-cover" style="background-color: #FFF;">
+                  <img src="{% static 'resumeweb/assets/img/photos/photo-26.jpg' %}">
+                </div>
+                <div class="card-img-start w-100 bg-cover" style="background-color: #FFF;">
+                  <img src="{% static 'resumeweb/assets/img/photos/photo-26.jpg' %}">
+                </div>
+              </div>
+            </div>
+            <!-- messages  -->
+            <div class="col-12 col-md-6 position-static">
+              <div class="position-static" data-flickity='{"wrapAround": true, "pageDots": false, "imagesLoaded": true, "adaptiveHeight": true}' id="blogSlider">
+                <!-- CPT -->
+                <div class="w-100">
+                  <div class="card-body">
+                    <h3>CPT</h3>
+                    <p>
+                      The most entry level work authrozation supported by US Government
+                      with collaboration of your corresponding school
+                    </p>
+                    <p class="mb-3 text-muted">
+                      Curricular Practical Training aften known as CPT is a special
+                      work authorization that your school may grant to you if they think
+                      it is deemed appropriate for advancement of your study.
+
+                      However it has few strict guidelines.
+                    </p>
+                    <a href="{% url 'usvisa_bycat' 'cpt' %}">All CPT Services</a>
+                  </div>
+                </div>
+                <!-- OPT -->
+                <div class="w-100">
+                  <div class="card-body">
+                    <h3>OPT</h3>
+                    <p>
+                      The most solid foundation that paves your way of higher level
+                       work authrozation supported by US Government
+                    </p>
+                    <p class="mb-3 text-muted">
+                      Optional Practical Training aften refferred to as OPT is an 
+                      entry level work authorization issued to you by US government
+                      that ultimately opens the door for you to step into US job market.
+                      This type of work authorization is well knowen to the recruiters, hiring managers,
+                      as well as companies throughout the country.
+
+
+                    </p>
+                    <a href="{% url 'usvisa_bycat' 'opt' %}">All OPT Services</a>
+                  </div>
+                </div>
+                <!-- H1B -->
+                <div class="w-100">
+                  <div class="card-body">
+                    <h3>H1B</h3>
+                    <p>
+                      The most solid foundation that paves your way of higher level
+                       work authrozation supported by US Government
+                    </p>
+                    <p class="mb-3 text-muted">
+                      H1B is the most powerful, and well known 
+                      work authorization issued by US government. 
+                      A person that has H1B work visa
+                      enjoys full fledge benefit package offered by US government.
+                      This is the most popular and well knowen work visa 
+                      in the US job sector
+                    </p>
+                    <a href="{% url 'usvisa_bycat' 'h1b' %}">All H1B Services</a>
+                  </div>
+                </div>
+                <!-- H4 EAD -->
+                <div class="w-100">
+                  <div class="card-body">
+                    <h3>H4 EAD</h3>
+                    <p>
+                      The most solid foundation that paves your way of higher level
+                       work authrozation supported by US Government
+                    </p>
+                    <p class="mb-3 text-muted">
+                      Optional Practical Training aften refferred to as OPT is an 
+                      entry level work authorization issued to you by US government
+                      that ultimately opens the door for you to step into US job market.
+                      This type of work authorization is well knowen to the recruiters, hiring managers,
+                      as well as companies throughout the country.
+                    </p>
+                    <a href="{% url 'usvisa_bycat' 'h4ead' %}">All H4EAD Services</a>
+                  </div>
+                </div>
+                <!-- GC EAD -->
+                <div class="w-100">
+                  <div class="card-body">
+                    <h3>GC EAD</h3>
+                    <p>
+                      The most solid foundation that paves your way of higher level
+                       work authrozation supported by US Government
+                    </p>
+                    <p class="mb-3 text-muted">
+                      Green Card EAD(GC EAD) is a temporary work authorization 
+                      granted by US government that gives you limitless boundary
+                      to work in the country. When you are in 
+                      
+                      Optional Practical Training aften refferred to as OPT is an 
+                      entry level work authorization issued to you by US government
+                      that ultimately opens the door for you to step into US job market.
+                      This type of work authorization is well knowen to the recruiters, hiring managers,
+                      as well as companies throughout the country.
+                    </p>
+                    <a href="{% url 'usvisa_bycat' 'gcead' %}">All GC EAD Services</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

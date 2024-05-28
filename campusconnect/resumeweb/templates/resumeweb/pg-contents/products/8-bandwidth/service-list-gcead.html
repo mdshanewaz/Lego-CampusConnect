@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<div class="d-flex justify-content-left mb-3">
+  <a href="{% url 'usvisa_bycat' 'cpt' %}" class="text-decoration-none">
+    <span class="display-4 fw-bolder" data-annual="29" data-monthly="49">GC EAD</span>
+  </a>
+</div>
+{% for cp in gcead_service_list %}
+  <div class="mb-4 border-bottom border-dark">
+      <p class="fs-sm text-reset fw-bolder mb-0">{{cp.sku | upper}}</p>
+      <p class="fw-bolder text-primary">{{cp.title | capfirst}}</p>
+      <p class="fs-sm text-reset">{{cp.description | truncatechars:100 | capfirst}}</p>
+      <p class="fs-sm">
+        <span class="text-reset">Price: ${{cp.listprice}}</span> 
+        <span class="text-danger">Current offer: ${{cp.saleprice}}</span>
+      </p>
+      <p>
+        <a class="fw-bolder text-primary text-decoration-none" href="{% url 'usvisa_prod_details' cp.id  %}">
+          Show Details <i class="fe fe-arrow-right ms-3"></i>
+        </a>
+      </p>
+  </div>
+{% endfor %}
+<p class="pt-3">
+  <a href="{% url 'usvisa_bycat' 'gcead' %}" class="fs-sm">Browse More</a>
+</p>
