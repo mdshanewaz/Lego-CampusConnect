@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<section class="py-5 py-md-8">
+  <div class="container border p-5" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;">
+    <div class="row align-items-center justify-content-between">
+      
+      <div class="col-12 col-md-6 mb-5 mb-md-0">
+        <div class="row">
+          <div class="col-6 me-n5">
+            <img src="{% static 'resumeweb/assets/img/photos/photo-23.jpg' %}" alt="..." class="img-fluid mb-4 rounded">
+          </div>
+          <div class="col-6 mt-8">
+            <img src="{% static 'resumeweb/assets/img/photos/photo-24.jpg' %}" alt="..." class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-5">
+
+        <h2 class="fw-bold">
+          Special Discounts for All Products
+        </h4>
+        <p class="text-muted">
+          We are offering discounts in almost all our services in both
+          Universal and Proficiency Service Product Lines
+        </p>
+        <a href="{% url 'exp180_services_all' %}" class="fs-sm fw-bold text-decoration-none">
+          Start Exploring <i class="fe fe-arrow-right ms-3"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
