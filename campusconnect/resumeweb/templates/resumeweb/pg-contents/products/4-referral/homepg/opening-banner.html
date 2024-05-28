@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<section class="pt-8 pb-9 pt-md-9 pb-md-12 py-lg-11 bg-between" style="background-image: url(/static/resumeweb/assets/img/illustrations/illustration-6-cropped.png), url(/static/resumeweb/assets/img/illustrations/illustration-4-cropped.png);">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-7 text-center">
+
+        <!-- Image (mobile) -->
+        <img src="{% static 'resumeweb/assets/img/illustrations/illustration-8.png' %}" alt="..." class="img-fluid mb-6 d-lg-none">
+
+        <div class="row py-3">
+          <h6 class="text-uppercase text-primary">Services / Universal / Referral</h6>
+        </div>
+
+
+        <div class="row mb-4 mb-md-4">
+          <div class="ms-n4">
+            <div>              
+              <h1 class="fw-bolder mb-0 text-primary">
+                Referral Program
+              </h1>
+              <p class="fs-lg text-reset mb-0">
+                product tagline
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="fs-lg text-muted mb-6 mb-md-8">
+        Connect with the appropriate recruiter or hiring manager who is
+          looking for a candidate just like you. we are a bridge. we connect you with the appropriate hiring manager or recruiter who is looking
+      	for a candidate like you.
+      	No more searching for sand in a pond
+        </p>
+        <a href="{% url 'referral_how_to_sub_req' %}" class="btn btn-primary-soft btn-sm rounded-0">
+          Learn more
+        </a>
+        <a href="{% url 'referral_submit_req_now' %}" class="btn btn-primary me-1 btn-sm rounded-0">
+          Get started <i class="fe fe-arrow-right ms-3"></i>
+        </a>
+
+
+      </div>
+    </div>
+  </div>
+</section>

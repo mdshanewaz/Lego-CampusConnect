@@ -1,0 +1,130 @@
+{% load static %}
+
+    
+
+<div class="row justify-content-between align-items-center mb-6">
+  <h1 class=""> How to submit Referral Request</h1>
+</div>
+
+
+
+<div class="row">
+
+  <div class="col-12 col-md-4">
+    <div class="row">
+      <div class="col-auto col-md-12">
+        <div class="row gx-0 align-items-center mb-md-5">
+          <div class="col-auto">
+            <a class="btn btn-sm btn-rounded-circle btn-gray-400-10 disabled opacity-1" href="#!">
+              <span>1</span>
+            </a>
+          </div>
+          <div class="col">
+            <hr class="d-none d-md-block bg-gray-900-50 me-n7">
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="col col-md-12 ms-n5 ms-md-0">
+        <h3 class="text-white">
+          Review Checklist
+        </h3>
+        <p class="text-muted-80 mb-6 mb-md-0">
+          We start with a short 3-step online survey to help us 
+          determine the best banking solution for your specific startup.
+        </p>
+        <p>
+          <div class="py-3">
+            <a href="{% url 'referral_app_checklist' %}" class="align-items-center text-decoration-none">
+              <span class="mx-auto">Learn More</span> <i class="fe fe-arrow-right"></i>
+            </a>
+          </div>              
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="row">
+
+      <div class="col-auto col-md-12">
+        <div class="row gx-0 align-items-center mb-md-5">
+          <div class="col-auto">
+            <a href="#!" class="btn btn-sm btn-rounded-circle btn-gray-400-10 disabled opacity-1">
+              <span>2</span>
+            </a>
+          </div>
+          <div class="col">
+            <hr class="d-none d-md-block bg-gray-900-50 me-n7">
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-12 ms-n5 ms-md-0">
+        <h3 class="text-white">
+          Check Eligibility
+        </h3>
+        <p class="text-muted-80 mb-6 mb-md-0">
+          From your information, we generate a banking stack 
+          well suited to your company’s personalized needs.
+        </p>
+        <p>
+          <div class="py-3">
+            <a href="{% url 'referral_eligibility' %}" class="align-items-center text-decoration-none">
+              <span class="mx-auto">Learn More</span> <i class="fe fe-arrow-right"></i>
+            </a>
+          </div>              
+        </p>            
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="row">
+
+      <div class="col-auto col-md-12">
+        <div class="row gx-0 align-items-center mb-md-5">
+          <div class="col-auto">
+            <a href="#!" class="btn btn-sm btn-rounded-circle btn-gray-400-10 disabled opacity-1">
+              <span>3</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-12 ms-n5 ms-md-0">
+        <h3 class="text-white">
+          See Current Opennings
+        </h3>
+        <p class="text-muted-80 mb-0">
+          We handle the creation of your actual account including 
+          registering with the financial and government agencies.
+        </p>
+        <p>
+          <div class="py-3">
+            <a href="{% url 'referral_pos_list' %}" class="align-items-center text-decoration-none">
+              <span class="mx-auto text-white">Learn More</span> <i class="fe fe-arrow-right"></i>
+            </a>
+          </div>              
+        </p>            
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="row pt-7">
+  <div class="col-12 col-md-9 col-lg-8 col-xl-7">
+    <a href="{% url 'referral_submit_req_now' %}" class="btn btn-primary btn-sm rounded-0">
+      <span class="mx-auto">Start Submission Now</span>
+    </a>
+  </div>
+</div>
+
+

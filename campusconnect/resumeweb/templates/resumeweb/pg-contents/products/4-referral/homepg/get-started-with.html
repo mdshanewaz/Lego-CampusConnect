@@ -1,0 +1,37 @@
+
+<div class="col-12 col-md-6 py-4 py-md-5 py-lg-4 align-items-center">
+  <h2 class="fw-bold">
+    Get Started with Referral Program
+  </h2>
+  <p class="fs-lg text-muted mb-3">
+    Getting started with Referral Program is not difficult. Just submit the form 
+    along with your resume, and join the queue. Safely leave the rest on us 
+    as you start working behind the scene to advance your job search in the next level.
+  </p>
+  <div class="d-flex py-3">
+    <div class="pe-5">
+      <h5 class="text-muted mb-0">
+        <a href="{% url 'referral_submit_req_now' %}">Start Application <br>Now</a>
+      </h5>
+      
+    </div>
+    <div class="border-start border-gray-300"></div>
+    <div class="px-3">
+      <h5 class="text-success mb-0">
+          <a href="{% url 'referral_app_checklist' %}">Review <br>Checklist</a>
+      </h5>
+    </div>
+    <div class="border-start border-gray-300"></div>
+    <div class="ps-5">
+      <h5 class="text-success mb-0">
+        <a href="{% url 'referral_terms_cond' %}">Terms & Conditions<br>Learn More</a>
+      </h5>
+    </div>
+  </div>                     
+</div>
+
+
+<div class="col-12 col-md-6 col-lg-5 offset-lg-1 py-4 py-md-5 py-lg-4">
+  {% include 'resumeweb/components/menus/products/referral/prod-insight-1.html' %}
+</div>
+

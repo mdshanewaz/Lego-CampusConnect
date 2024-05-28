@@ -1,0 +1,31 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<p class="text-reset">
+  Please submit the form below with
+  as detailed information as you can add.
+  Your information will help us find
+  appropriate service(s) according to
+  your needs.
+</p>
+
+<hr class="bg-gray-300 my-6">
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}  
+
+  {% include 'resumeweb/components/forms/referral/resume.html' %}
+
+  {% include 'resumeweb/components/forms/referral/target_job_des.html' %}  
+  {% include 'resumeweb/components/forms/referral/jobsearch_status.html' %}  
+  {% include 'resumeweb/components/forms/referral/intprep_status.html' %}  
+
+
+  {% include 'resumeweb/components/forms/referral/employment_status.html' %}  
+  {% include 'resumeweb/components/forms/referral/education_status.html' %}  
+  {% include 'resumeweb/components/forms/referral/contact_info.html' %}
+
+  {% include 'resumeweb/components/forms/referral/consent.html' %}  
+
+  <button type="submit" class="btn btn-primary btn-xs rounded-0">Submit</button>
+</form>
