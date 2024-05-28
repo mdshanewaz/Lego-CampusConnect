@@ -1,0 +1,34 @@
+{% load static %}
+
+
+
+  <div class="row g-5 mx-auto mb-1">
+    
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+        <a href="{% url 'proglang_bycat' 'c' %}"><h2 class="pt-5 fw-bolder">C / C++</h2></a>
+    </div>
+
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+      <a href="{% url 'proglang_bycat' 'c#' %}"><h2 class="pt-5 fw-bolder">C# / .Net</h2></a>
+    </div>
+
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+      <a href="{% url 'proglang_bycat' 'php' %}"><h2 class="pt-5 fw-bolder">PHP</h2></a>
+    </div>
+  </div>
+    
+
+  <div class="row g-5 mx-auto">
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+      <a href="{% url 'proglang_bycat' 'java' %}"><h2 class="pt-5 fw-bolder">Java</h2></a>
+    </div>    
+
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+        <a href="{% url 'proglang_bycat' 'python' %}"><h2 class="pt-5 fw-bolder">Python</h2></a>
+    </div>
+
+    <div class="col-4 col-md-2 col-lg-2 text-center mx-auto">
+      <a href="{% url 'proglang_bycat' 'javascript' %}"><h2 class="pt-5 fw-bolder">JavaScript</h2></a>
+    </div>
+
+  </div>
